@@ -227,18 +227,17 @@ def main():
 
     st.write("Please answer below questions regarding you health data results")
 
-    if dataset_choice == "UCI Heart Disease":
-        user_data = get_cleveland_input()
-        model = cleveland_model
-    else:
+    if dataset_choice == "Behavioural Factors (BRFSS)":
         user_data = get_brfss_input()
         model = brfss_model
+    else:
+        user_data = get_cleveland_input()
+        model = cleveland_model
 
     st.write("Summary of the details you provided:")
     st.write(user_data)
 
     if st.button("Predict"):
-        # if dataset_choice == "UCI Heart Disease":
         prediction_prob = predict(user_data, model)
 
         if prediction_prob > 0.5:
