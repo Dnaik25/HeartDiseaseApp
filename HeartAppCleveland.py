@@ -223,7 +223,7 @@ def predict(features, model):
 def main():
     st.title("Heart Disease Prediction")
 
-    dataset_choice = st.selectbox("Choose a dataset:", ["UCI Heart Disease", "Behavioural Factors (BRFSS)"])
+    dataset_choice = st.selectbox("Choose a dataset:", ["Behavioural Factors (BRFSS)","UCI Heart Disease"])
 
     st.write("Please answer below questions regarding you health data results")
 
