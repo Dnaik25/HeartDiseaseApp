@@ -25,66 +25,66 @@ def get_cleveland_input():
     user_input_cleveland = {}
 
     # Numerical input
-    age = st.number_input("Age", min_value=20, max_value=85)
+    age = st.number_input(" Please enter patients age", min_value=20, max_value=85)
     user_input_cleveland["age"] = age
 
     # Categorical input
 
     sex_mapping = {"Male": 1, "Female": 0}
 
-    sex = st.radio("Sex", options=["Male", "Female"])
+    sex = st.radio("Please selecte patients sex", options=["Male", "Female"])
     user_input_cleveland["sex"] = sex
 
     cp_mapping = {"Typical Angina": 1, "Atypical Angina": 2, "Non-Anginal Pain": 3, "Asymptomatic": 4}
 
-    cp = st.radio("Chest Pain Type", ["Typical Angina", "Atypical Angina", "Non-Anginal Pain", "Asymptomatic"])
+    cp = st.radio("Does the patient have any types of Chest Pains?", ["Typical Angina", "Atypical Angina", "Non-Anginal Pain", "Asymptomatic"])
     user_input_cleveland["cp"] = cp
 
-    trestbps = st.slider("Resting Blood Pressure", 50, 200)
+    trestbps = st.slider("What is the patients resting blood pressure in mmHg?", 50, 200)
     user_input_cleveland["trestbps"] = trestbps
 
-    chol = st.number_input("Serum Choelstrol", min_value=100, max_value=600)
+    chol = st.number_input("What is patients serum cholestrol levels in mg/dL", min_value=100, max_value=600)
     user_input_cleveland["chol"] = chol
 
     fbs_mapping = {"Yes": 1, "No": 0}
 
-    fbs = st.selectbox("Fasting Blood sugar > 120 mg/dl", options=["Yes", "No"])
+    fbs = st.selectbox(" Is the patients fasting Blood sugar > 120 mg/dL", options=["Yes", "No"])
     user_input_cleveland["fbs"] = fbs
 
     restecg_mapping = {"Normal": 0, "ST-T wave abnormality": 1, "Left ventricular hypertrophy": 2 }
 
-    restecg = st.selectbox("Resting ECG results", options=["Normal", "ST-T wave abnormality", "Left ventricular hypertrophy"])
+    restecg = st.selectbox("What is the patiens resting ECG results", options=["Normal", "ST-T wave abnormality", "Left ventricular hypertrophy"])
     user_input_cleveland["restecg"] = restecg
 
-    thalach = st.number_input("Max Heart Rate", min_value=60, max_value=250)
+    thalach = st.number_input("What is the maximum Heart Rate of the patient?", min_value=60, max_value=250)
     user_input_cleveland["thalach"] = thalach
 
     exang_mapping = {"Yes": 1, "No": 0}
 
-    exang = st.selectbox("Excercise induced angina", options=["Yes", "No"])
+    exang = st.selectbox("Does the patient suffer from excercise induced angina?", options=["Yes", "No"])
     user_input_cleveland["exang"] = exang
 
-    oldpeak = st.number_input("ST depression induced by exercise", min_value=0, max_value=10)
+    oldpeak = st.number_input(" Is patients ST depression induced by exercise", min_value=0, max_value=10)
     user_input_cleveland["oldpeak"] = oldpeak
 
     slope_mapping = {"Upsloping": 1, "Flat": 2, "Downsloping":3}
 
-    slope = st.selectbox("Slope of Peak exercise ST", options=["Upsloping", "Flat", "Downsloping"])
+    slope = st.selectbox("What is the slope of Peak exercise ST segment?", options=["Upsloping", "Flat", "Downsloping"])
     user_input_cleveland["slope"] = slope
 
     ca1_0_mapping = {"Yes": 1, "No": 0}
 
-    ca1_0 = st.selectbox("1 Major Blood Vessel colored by Floroscopy", options=["Yes", "No"])
+    ca1_0 = st.selectbox("1 Major Blood Vessel colored by Floroscopy?", options=["Yes", "No"])
     user_input_cleveland["ca_1.0"] = ca1_0
 
     ca2_0_mapping = {"Yes": 1, "No": 0}
 
-    ca2_0 = st.selectbox("2 Major Blood Vessel colored by Floroscopy", options=["Yes", "No"])
+    ca2_0 = st.selectbox("2 Major Blood Vessel colored by Floroscopy?", options=["Yes", "No"])
     user_input_cleveland["ca_2.0"] = ca2_0
 
     ca3_0_mapping = {"Yes": 1, "No": 0}
 
-    ca3_0 = st.selectbox("3 Major Blood Vessel colored by Floroscopy", options=["Yes", "No"])
+    ca3_0 = st.selectbox("3 Major Blood Vessel colored by Floroscopy?", options=["Yes", "No"])
     user_input_cleveland["ca_3.0"] = ca3_0
 
     thal6_0_mapping = {"Yes": 1, "No": 0}
