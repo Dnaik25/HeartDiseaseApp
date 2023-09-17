@@ -56,7 +56,7 @@ def get_cleveland_input():
     restecg = st.selectbox("What is the patiens resting ECG results", options=["Normal", "ST-T wave abnormality", "Left ventricular hypertrophy"])
     user_input_cleveland["restecg"] = restecg
 
-    thalach = st.number_input("What is the maximum Heart Rate of the patient?", min_value=60, max_value=250)
+    thalach = st.slider("What is the maximum Heart Rate of the patient?",60, 250)
     user_input_cleveland["thalach"] = thalach
 
     exang_mapping = {"Yes": 1, "No": 0}
